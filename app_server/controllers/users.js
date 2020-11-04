@@ -22,7 +22,7 @@ const addUser = (req, res) => {
     .then((response) => {
       console.log("User created");
       console.log(response);
-      res.redirect("/addUser");
+      res.redirect(`${API_URL}/addUser`);
     })
     .catch((error) => {
       res.render("error", {
@@ -45,7 +45,7 @@ const changeUser = (req, res) => {
     .then((response) => {
       console.log("User updated");
       console.log(response.data);
-      res.redirect("/changeUser");
+      res.redirect(`${API_URL}/changeUser`);
     })
     .catch((error) => {
       res.render("error", {
@@ -56,7 +56,7 @@ const changeUser = (req, res) => {
 };
 
 const getUserInfo = (req, res) => {
-  res.redirect(`/changeUser/${req.body.id}`);
+  res.redirect(`${API_URL}/changeUser/${req.body.id}`);
 };
 
 const updateUserPage = (req, res) => {
