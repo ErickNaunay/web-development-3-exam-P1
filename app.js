@@ -27,7 +27,7 @@ const allowedList = ["http://localhost:3000"];
 const corsOptionsDelegate = function handler(req, callback) {
   const corsOptions = { origin: false };
 
-  if (allowedList.indexOf(req.header("Origin") ?? "") !== -1) {
+  if (allowedList.indexOf(req.header("Origin") || "") !== -1) {
     corsOptions.origin = true;
   }
   callback(null, corsOptions);
