@@ -15,13 +15,19 @@ const addUser = (req, res) => {
       console.log("User created");
       console.log(response);
       res.redirect("/addUser");
+    })
+    .catch((error) => {
+      res.render("error", {
+        message: "Error updating with form values",
+        error,
+      });
     });
 };
 
 const changeUser = (req, res) => {
   changeUserPath = `api/v1/users`;
   axios
-    .put(`${API_URL}/${changeUserPath}/${req.body.id}`, {
+    .put(`${API_URL}/${changeUserPath}/${req.params.id}`, {
       nombre: req.body.nombre,
       apellido: req.body.apellido,
       direccion: req.body.direccion,
@@ -29,19 +35,29 @@ const changeUser = (req, res) => {
       telefono: req.body.telefono,
     })
     .then((response) => {
-      res.redirect("/changeUser");
       console.log("User updated");
-      console.log(response);
+      console.log(response.data);
+      res.redirect("/changeUser");
+    })
+    .catch((error) => {
+      res.render("error", {
+        message: "Error updating with form values",
+        error,
+      });
     });
 };
 
 const getUserInfo = (req, res) => {
-  getUserInfoPath = `api/v1/users/${req.body.id}`;
+  res.redirect(`/changeUser/${req.body.id}`);
+};
+
+const updateUserPage = (req, res) => {
+  getUserInfoPath = `api/v1/users/${req.params.id}`;
 
   axios.get(`${API_URL}/${getUserInfoPath}`).then((response) => {
     console.log(response.data);
     res.render("changeUser", {
-      id: req.body.id,
+      id: req.params.id,
       nombre: response.data.nombre,
       apellido: response.data.apellido,
       direccion: response.data.direccion,
@@ -55,4 +71,5 @@ module.exports = {
   addUser,
   changeUser,
   getUserInfo,
+  updateUserPage,
 };

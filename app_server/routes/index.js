@@ -28,6 +28,14 @@ router.get('/changeUser', function(req, res, next) {
 router.post('/changeUser', ctrUsers.getUserInfo);
 
 /* PUT Update User page. */
-router.put('/changeUser', ctrUsers.changeUser);
+router.put('/changeUser', (req, res, next) => {
+  res.redirect('/changeUser')  
+});
+
+/* GET Update User page. */
+router.get('/changeUser/:id', ctrUsers.updateUserPage);
+
+/* PUT Update User page. */
+router.post('/changeUser/:id', ctrUsers.changeUser);
 
 module.exports = router;
