@@ -13,7 +13,11 @@ router.get('/', function(req, res, next) {
 
 /* GET Add User page. */
 router.get('/addUser', function(req, res, next) {
-    res.render('addUser');
+    res.render('addUser', {
+        title: 'Examen No. 1',
+        materia: 'Desarrollo web 3',
+        examen: 'Examen de medio semestre.'
+    });
 });
 
 /* POST Add User page. */
