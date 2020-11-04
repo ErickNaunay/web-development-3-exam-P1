@@ -1,5 +1,12 @@
 const axios = require("axios");
-const API_URL = "http://localhost:3000";
+
+let API_URL;
+
+API_URL = "http://localhost:3000";
+
+if(process.env.NODE_ENV == 'production')
+  API_URL = "https://examen-erick-naunay.herokuapp.com/";
+
 
 const addUser = (req, res) => {
   addUserPath = `api/v1/users`;
