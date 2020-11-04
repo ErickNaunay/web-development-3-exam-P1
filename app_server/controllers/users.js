@@ -18,7 +18,7 @@ const addUser = (req, res) => {
     })
     .catch((error) => {
       res.render("error", {
-        message: "Error updating with form values",
+        message: "Error creating user",
         error,
       });
     });
@@ -41,7 +41,7 @@ const changeUser = (req, res) => {
     })
     .catch((error) => {
       res.render("error", {
-        message: "Error updating with form values",
+        message: "Error updating user",
         error,
       });
     });
