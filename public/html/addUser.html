@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>Examen de Medio Semestre - Desarrollo web 3</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="../stylesheets/cover.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+            <div class="inner">
+                <h3 class="masthead-brand">Examen No. 1</h3>
+                <nav class="nav nav-masthead justify-content-center">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                    <a class="nav-link active" href="addUser.html">Añadir Usuarios</a>
+                    <a class="nav-link" href="changeUser.html">Modificar Usuarios</a>
+                </nav>
+            </div>
+        </header>
+
+        <main role="main" class="inner cover bg-dark">
+            <hr style="background-color: white;">
+            <h1 class="text-center">Creación de usuarios</h1>
+            </h1>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body bg-secondary">
+                            <form action="/add" method="post" role="form">
+
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="nombre">Nombre</label>
+                                            <input class="form-control" id="nombre" name="nombre" type="text" placeholder="Ingrese el nombre del usuario">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="apellido">Apellido</label>
+                                            <input class="form-control" id="apellido" name="apellido" type="text" placeholder="Ingrese el apellido del usuario">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="direccion">Dirección</label>
+                                    <input class="form-control" id="direccion" type="text" name="direccion" placeholder="Ingrese la dirección del usuario">
+                                </div>
+
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="edad">Edad</label>
+                                            <input class="form-control" id="edad" type="text" name="edad" placeholder="Ingrese la edad del usuario">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="telefono">Teléfono</label>
+                                            <input class="form-control" id="telefono" type="text" name="telefono" placeholder="Ingrese el teléfono del usuario">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-dark" type="submit">Crear Usuario</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr style="background-color: white;">
+        </main>
+
+        <footer class="mastfoot mt-auto">
+            <div class="inner">
+                <p>Desarrollo web 3 <a href="https://www.usfq.edu.ec/es" target="_blank">USFQ</a>, Examen de medio semestre.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
