@@ -4,9 +4,10 @@ let API_URL;
 
 API_URL = "http://localhost:3000";
 
-if(process.env.NODE_ENV == 'production')
+if (process.env.NODE_ENV === "production") {
+  console.log("PPRRROOOOD")
   API_URL = "https://examen-erick-naunay.herokuapp.com/";
-
+}
 
 const addUser = (req, res) => {
   addUserPath = `api/v1/users`;
