@@ -2,9 +2,7 @@ const mongoose = require("mongoose");
 const readLine = require("readline");
 require("./users");
 
-//const dbURI = 'mongodb://localhost/mibasededatos'
-let dbURI =
-  "mongodb+srv://development:W8yFtANZ2humVnv@development-cluster.bn7nu.mongodb.net/storyteller?retryWrites=true&w=majority";
+const dbURI = 'mongodb://localhost/mibasededatos'
 if (process.env.NODE_ENV === "production") {
   dbURI = process.env.MONGODB_URI; // conexion a la DB Remota
 }
