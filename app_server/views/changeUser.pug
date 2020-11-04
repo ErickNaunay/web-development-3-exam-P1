@@ -37,7 +37,6 @@ head
     hr(style='background-color: white;')
     form.form-inline.mt-2.mt-md-0(action='' method='post' role='form')
       p.text-center.mt-sm-2 Ingrese el c&oacute;digo de usuario a modificar 
-      var id = #{id}
       input.form-control.mr-sm-2.ml-sm-2(type='text' placeholder='Código de usuario' value=id aria-label='Buscar' name='id')
       button.btn.btn-outline-light.my-2.my-sm-0(type='submit') Buscar
     br
@@ -49,27 +48,22 @@ head
               .row
                 .col
                   .form-group
-                    var nombre = #{nombre}
                     label(for='nombre') Nombre
                     input#nombre.form-control(name='nombre' type='text' value=nombre placeholder='Ingrese el nombre del usuario')
                 .col
                   .form-group
-                    var apellido = #{apellido}
                     label(for='apellido') Apellido
                     input#apellido.form-control(name='apellido' type='text' value=apellido placeholder='Ingrese el apellido del usuario')
               .form-group
-                var direccion = #{direccion}
                 label(for='direccion') Direcci&oacute;n
                 input#direccion.form-control(type='text' name='direccion' value=direccion placeholder='Ingrese la dirección del usuario')
               .row
                 .col
                   .form-group
-                    var edad = #{edad}
                     label(for='edad') Edad
                     input#edad.form-control(type='text' name='edad' value=edad placeholder='Ingrese la edad del usuario')
                 .col
                   .form-group
-                    var telefono = #{telefono}
                     label(for='telefono') Tel&eacute;fono
                     input#telefono.form-control(type='text' name='telefono' value=telefono placeholder='Ingrese el teléfono del usuario')
               button.btn.btn-dark(type='submit') Modificar Usuario

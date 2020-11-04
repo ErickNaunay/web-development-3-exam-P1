@@ -30,8 +30,8 @@ const changeUser = (req, res) => {
     })
     .then((response) => {
       res.redirect("/changeUser");
-      console.log('User updated')
-      console.log(response)
+      console.log("User updated");
+      console.log(response);
     });
 };
 
@@ -39,15 +39,15 @@ const getUserInfo = (req, res) => {
   getUserInfoPath = `api/v1/users/${req.body.id}`;
 
   axios.get(`${API_URL}/${getUserInfoPath}`).then((response) => {
-      console.log(response.data)
-    res.render('changeUser', {
-        id: req.body.id,
-        nombre: response.data.nombre,
-        apellido: response.data.apellido,
-        direccion: response.data.direccion,
-        edad: response.data.edad,
-        telefono: response.data.telefone,
-    })
+    console.log(response.data);
+    res.render("changeUser", {
+      id: req.body.id,
+      nombre: response.data.nombre,
+      apellido: response.data.apellido,
+      direccion: response.data.direccion,
+      edad: response.data.edad,
+      telefono: response.data.telefono,
+    });
   });
 };
 
